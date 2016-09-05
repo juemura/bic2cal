@@ -677,6 +677,11 @@ h2 {
 /*************************
 ******Map CSS****
 **************************/
+
+#contact .col-md-8 {
+  padding: 0;
+}
+
 #map {
   position: relative;
 }
@@ -690,20 +695,10 @@ h2 {
 ******Contact CSS****
 **************************/
 
-.contact-section {
+#contact {
   background-color: #f7ab24;
-  /*background-image: url("../images/contact-bg.jpg");*/
-  background-position:60% 0;
-  background-size:contain;
-  background-repeat:no-repeat;  
-  position: relative;
 }
 
-.ear-piece {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
 
 #contact .container {
   padding-top:47px;
@@ -712,6 +707,11 @@ h2 {
 #contact h3 {
   text-transform:inherit;
   color: #373737; 
+}
+
+#contact-section {
+  padding: 10px;
+  padding-right: 20px;
 }
 
 #contact-section h3 {  
@@ -724,7 +724,6 @@ h2 {
 }
 
 .contact-text {
-  margin-bottom: 35px;
   display: block;
 }
 
@@ -757,8 +756,7 @@ h2 {
   border: none;
   font-size: 24px;
   padding: 6px 42px;
-  margin-bottom: 110px;
-  margin-top: 10px
+  margin-bottom: 20px;
 }
 
 #contact-section .btn-primary:hover {
