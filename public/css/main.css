@@ -396,12 +396,27 @@ h2 {
   overflow: hidden;
   padding: 50px 0 50px;
   color: #130767;
-  max-height: 200px;
+}
+
+.about_app {
+  font-size: 150%;
 }
 
 .download_badge {
   margin: auto;
   max-height: 100px;
+  padding: 10px;
+}
+
+
+/*************************
+*******Rewards CSS******
+**************************/
+#rewards {
+  background-color: #33888F;
+  position: relative;
+  overflow: hidden;
+  min-height: 256px;
 }
 
 
@@ -412,7 +427,10 @@ h2 {
   background-color: #33888F;
   position: relative;
   overflow: hidden;
-  min-height: 256px;
+}
+
+.screenshot {
+  padding: 50px;
 }
 
 .prize {
