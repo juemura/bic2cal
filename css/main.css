@@ -386,7 +386,24 @@ h2 {
   margin-right: 3px;
 }
 
- 
+ /*************************
+*******Download CSS******
+**************************/
+
+#download {
+  background-color: #EFBC00;
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0 50px;
+  color: #130767;
+  max-height: 200px;
+}
+
+.download_badge {
+  margin: auto;
+  max-height: 100px;
+}
+
 
  /*************************
 *******Event CSS******
