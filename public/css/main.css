@@ -262,7 +262,7 @@ h2 {
   background-repeat:no-repeat;
   position: relative;
   overflow: hidden;
-  padding: 130px 0 100px;
+  padding: 30px 0 100px;
 }
 
 .watch {
@@ -410,17 +410,15 @@ h2 {
 **************************/
 #event {
   background-color: #33888F;
-  background-image: url("../images/performar-bg.jpg");
-  background-position: 50% 0;
-  background-size: contain;
   position: relative;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  min-height: 256px;
 }
 
-.guitar {
+.prize {
   position: absolute;
   right:0;
-  top: 0
+  top: 0;
 }
 
 
@@ -457,19 +455,19 @@ h2 {
   position: relative;
 }
 
-.even-control-left, 
-.even-control-right {
+.event-control-left, 
+.event-control-right {
   position: absolute;
   font-size: 24px;
   color: #fff;
   top: 0;
 }
 
-.even-control-left {
+.event-control-left {
   right: 3%
 } 
 
-.even-control-right {
+.event-control-right {
   right: 0;
 }
 
