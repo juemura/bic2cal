@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
-@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200,700);
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200,700);
 
 
 /*************************
@@ -398,7 +398,7 @@ h2 {
   background-color: #EFBC00;
   position: relative;
   overflow: hidden;
-  padding: 50px 0 50px;
+  padding: 50px 0 70px;
   color: #130767;
 }
 
@@ -435,13 +435,16 @@ h2 {
 }
 
 .screenshot {
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .prize {
   position: absolute;
   right:0;
   top: 0;
+  overflow: hidden;
+  z-index: -1;
 }
 
 
@@ -459,7 +462,7 @@ h2 {
 }
 
 .single-event h4 {
-  color: #FFFFFF;
+  color: rgba(0,0,0,.5);
   font-size: 24px;
   font-weight: 300;
   line-height: 26px;
@@ -504,29 +507,36 @@ h2 {
   position: relative;  
   width: 100%;
   display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.guitar2 {
-  top: 0;
-  width: 50%;
-}
-
-.guitar2 img {
-  padding-top: 3%;
-}
 
 .about-content {
-  width: 50%;
-  /*background-image: url("../images/about-bg.jpg");*/
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 70px 70px 110px;
+  width: 100%
+  padding: 70px 0px 70px;
 }
 
 
 #about h2 {
-  margin-bottom: 23px;
+  margin-bottom: 40px;
+}
+
+#about img {
+  margin: 0 auto;
+}
+
+.about-step {
+  text-align: center;
+}
+
+.about-step h4 {
+  color: #555;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 26px;
+  margin-top: 25px;
+  text-transform: uppercase;
 }
 
 .about-content p {
@@ -649,11 +659,15 @@ h2 {
   padding: 0;
 }
 
+#sponsor p {
+  font-size: 32px;
+  padding-left: 40px;
+}
 
 #sponsor .item ul li {
   display: inline-block;
   list-style: none;
-  width: 33.33%;
+  width: 50%;
   margin-bottom: 75px;
 }
 
@@ -718,8 +732,18 @@ h2 {
   padding-right: 20px;
 }
 
-#contact-section h3 {  
+#contact-section h2 {
+  padding-top: 20px;  
   margin-bottom: 25px
+}
+
+#contact-section p {
+  font-size: 28px;
+  color: #555;
+}
+
+#contact-section a {
+  font-size: 28px;
 }
 
 #contact address {
