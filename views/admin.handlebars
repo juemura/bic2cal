@@ -17,15 +17,15 @@
 </head><!--/head-->
 
 <body ng-controller="AdminCtrl">
-	<section ng-show="!loggedIn">
+	<section ng-show="!loggedIn" style="display:block;">
 		<h1 class="signup-title" style="text-align:center">Signup</h1>
-        <label class="input">
+        <label class="input" style="display:block;margin:auto;padding-left:30%;padding-right:30%;padding-bottom:10px">
           <input type="text" class="form-control" placeholder="Username" ng-model="admin.username">
         </label>
-		<label class="input">
+		<label class="input" style="display:block;margin:auto;padding-left:30%;padding-right:30%;padding-bottom:10px">
           <input type="text" class="form-control" placeholder="Password" ng-model="admin.password">
         </label>
-      <button class="btn btn-primary" ng-click="logIn()">Submit</button>
+      <button class="btn btn-primary" style="display:block;margin:auto;" ng-click="logIn()">Log in</button>
 	</section>
 	<section id="rewards" ng-show="loggedIn">
 		<div class="container">
