@@ -394,7 +394,7 @@ h2 {
   background-color: #EFBC00;
   position: relative;
   overflow: hidden;
-  padding: 50px 0 50px;
+  padding: 50px 0 70px;
   color: #130767;
 }
 
@@ -456,7 +456,7 @@ h2 {
 }
 
 .single-event h4 {
-  color: #FFFFFF;
+  color: rgba(0,0,0,.5);
   font-size: 24px;
   font-weight: 300;
   line-height: 26px;
@@ -653,11 +653,15 @@ h2 {
   padding: 0;
 }
 
+#sponsor p {
+  font-size: 32px;
+  padding-left: 40px;
+}
 
 #sponsor .item ul li {
   display: inline-block;
   list-style: none;
-  width: 33.33%;
+  width: 50%;
   margin-bottom: 75px;
 }
 
