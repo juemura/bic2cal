@@ -431,7 +431,8 @@ h2 {
 }
 
 .screenshot {
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .prize {
@@ -500,29 +501,36 @@ h2 {
   position: relative;  
   width: 100%;
   display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.guitar2 {
-  top: 0;
-  width: 50%;
-}
-
-.guitar2 img {
-  padding-top: 3%;
-}
 
 .about-content {
-  width: 50%;
-  /*background-image: url("../images/about-bg.jpg");*/
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 70px 70px 110px;
+  width: 100%
+  padding: 70px 0px 70px;
 }
 
 
 #about h2 {
-  margin-bottom: 23px;
+  margin-bottom: 40px;
+}
+
+#about img {
+  margin: 0 auto;
+}
+
+.about-step {
+  text-align: center;
+}
+
+.about-step h4 {
+  color: #555;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 26px;
+  margin-top: 25px;
+  text-transform: uppercase;
 }
 
 .about-content p {
