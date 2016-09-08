@@ -280,12 +280,6 @@
 			</div>		
 		</div>
 	</section><!--/#event-->
-
-
-
-
-	
-
 	<section id="about">
 		<div class="container">
 			<h2>How it works</h2>
@@ -330,47 +324,19 @@
 						<h2 class="heading">Vote on the rewards!</h2>
 					</div>
 					<button style="margin:auto; display:block" class="btn btn-primary" ng-click="vote()">Vote</button>
-					<section class="insert" style="float:left; padding-right:50px">
-					    <h3>Insert Data</h3>
-					        <div class="input">
-					            <input class="form-control" ng-model="inputChoiceName">
-					    		<button class="btn btn-primary" ng-click="addChoice()">Add choice</button>
-					        </div>
-					</section>
-					<section class="get" style="float:left; padding-right:50px">
-					    <h3>Get Data</h3>
-					    <table class="table">
-					    	<thead>
-					    		<tr>
-					    			<td>Name: </td>
-					    			<td>Votes: </td>
-					    			<td>Totalvotes: </td>
-					    			<td></td>
-					    		</tr>
-					    	</thead>
-					    	<tbody>
-					    		<tr ng-repeat="choice in choices">
-					    			<td>{[{choice.text}]}</td>
-					    			<td>{[{choice.votes}]}</td>
-					    			<td>{[{choice.totalVotes}]}</td>
-					    			<td><button class="btn btn-danger" ng-click="delete(choice._id)">Delete</button></td>
-					    		</tr>
-					    	</tbody>
-					    </table>
-					</section>
 				</div>
 				<div style="width:60%; margin:auto;margin-bottom:50px;">
-					<div ng-repeat="choice in choices">
-						<div style="padding-top:5px; padding-left: 8%">{[{choice.text}]}</div>
+					<div ng-repeat="poll in polls">
+						<div style="padding-top:5px; padding-left: 8%">{[{poll.text}]}</div>
 						<div style="width:100%">
 							<div style="float:left; width:8%">
 								<label>
-									<input type="radio" id="voteRadio" name="voteRadio" ng-click="selected(choice._id)">
+									<input type="radio" id="voteRadio" name="voteRadio" ng-click="selected(poll._id)">
 								</label>
 							</div>
 							<div style="float:right; width:92%">
-								<div style="background-color: lightblue; width:{[{choice.votes/choice.totalVotes*100}]}%; text-align: center;">
-									{[{choice.votes}]}
+								<div style="background-color: lightblue; width:{[{poll.votes/poll.totalVotes*100}]}%; text-align: center;">
+									{[{poll.votes}]}
 								</div>
 							</div>
 						</div>
@@ -477,6 +443,6 @@
  	<script type="text/javascript" src="js/main.js"></script> 
 	<script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js'></script>
 	<script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js'></script>
-	<script type="text/javascript" src="js/controller.js"></script>   
+	<script type="text/javascript" src="js/voteCtrl.js"></script>  
 </body>
 </html>

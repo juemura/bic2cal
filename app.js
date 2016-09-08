@@ -13,6 +13,9 @@ db = mongoose.connect('localhost:27017/poll');
 var choiceSchema = require('./models/rewardpoll.js').ChoiceSchema;
 var Choices = db.model('choices', choiceSchema);
 
+var adminSchema = require('./models/adminAcc.js').AdminSchema;
+var Admin = db.model('admin', adminSchema);
+
 
 var routes = require('./routes/index');
 
@@ -32,6 +35,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/admin', routes);
 
 //Calls to DB
 app.get('/poll', function(req, res, next) {
@@ -47,6 +51,7 @@ app.post('/poll', function(req, res, next) {
     votes: 0,
     totalVotes: req.body.totalVotes
   }
+  console.dir(item)
   var choice = new Choices(item);
   choice.save();
   res.json(item)
@@ -74,6 +79,24 @@ app.put('/poll/:id', function(req, res) {
     });
     res.json(choices);
   });
+});
+
+//Call to DB to login admin
+app.post('/login', function(req, res) {
+  console.dir(req.body)
+  var input = req.body
+  Admin.find(function(err, doc) {
+    var admin = doc[0]
+    if(err) 
+      throw err;
+    console.dir(admin)
+    if(admin.username == input.username &&
+     admin.password == input.password){
+      res.json({success: true});
+    } else {
+      res.json({message: "Wrong Username or Password"});
+    };
+  })
 });
 
 // catch 404 and forward to error handler
