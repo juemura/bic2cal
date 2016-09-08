@@ -43,6 +43,10 @@ h2 {
   font-size: 36px
 }
 
+.small-header {
+  margin-left: 10px;
+}
+
 .navbar-toggle {
   margin-top: 12px
 }

@@ -87,7 +87,7 @@ jQuery(function($) {'use strict',
 		clickable: false
 	});
 
-	var image = 'static/images/map-icon.png';
+	var image = 'images/map-icon.png';
 	map.addMarker({
 		lat: 37.872035,
 		lng: -122.258218,

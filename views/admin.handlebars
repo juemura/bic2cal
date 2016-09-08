@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminApp">
+<head profile="https://bic2cal.eecs.berkeley.edu/">
+<link rel="icon" 
+      type="image/png" 
+      href="images/bike_icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Bic2Cal</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">	
+	<link href="css/responsive.css" rel="stylesheet">
+</head><!--/head-->
+
+<body ng-controller="AdminCtrl">
+	<section ng-show="!loggedIn" style="display:block;">
+		<h1 class="signup-title" style="text-align:center">Signup</h1>
+        <label class="input" style="display:block;margin:auto;padding-left:30%;padding-right:30%;padding-bottom:10px">
+          <input type="text" class="form-control" placeholder="Username" ng-model="admin.username">
+        </label>
+		<label class="input" style="display:block;margin:auto;padding-left:30%;padding-right:30%;padding-bottom:10px">
+          <input type="text" class="form-control" placeholder="Password" ng-model="admin.password">
+        </label>
+      <button class="btn btn-primary" style="display:block;margin:auto;" ng-click="logIn()">Log in</button>
+	</section>
+	<section id="rewards" ng-show="loggedIn">
+		<div class="container">
+						<div class="row">
+				<div class="col-sm-12 col-md-2">
+					<div id="event-carousel" class="carousel slide" data-interval="false">
+						<h2 class="heading">Vote on the rewards!</h2>
+					</div>
+					<section class="insert" style="float:left; padding-right:50px">
+					    <h3>Insert Data</h3>
+					        <div class="input">
+					            <input class="form-control" ng-model="inputChoiceName">
+					    		<button class="btn btn-primary" ng-click="addChoice()">Add choice</button>
+					        </div>
+					</section>
+					<section class="get" style="float:left; padding-right:50px">
+					    <h3>Get Data</h3>
+					    <table class="table">
+					    	<thead>
+					    		<tr>
+					    			<td>Name: </td>
+					    			<td>Votes: </td>
+					    			<td>Totalvotes: </td>
+					    			<td></td>
+					    		</tr>
+					    	</thead>
+					    	<tbody>
+					    		<tr ng-repeat="choice in choices">
+					    			<td>{[{choice.text}]}</td>
+					    			<td>{[{choice.votes}]}</td>
+					    			<td>{[{choice.totalVotes}]}</td>
+					    			<td><button class="btn btn-danger" ng-click="delete(choice._id)">Delete</button></td>
+					    		</tr>
+					    	</tbody>
+					    </table>
+					</section>
+				</div>
+				<div style="z-index:0" class="prize">
+					<img class="img-responsive" src="images/prize.png" alt="prize">
+				</div>
+			</div>		
+		</div>
+	</section><!--/#rewards-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+ 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+ 	<script type="text/javascript" src="js/smoothscroll.js"></script>
+ 	<script type="text/javascript" src="js/jquery.parallax.js"></script>
+ 	<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+ 	<script type="text/javascript" src="js/jquery.nav.js"></script>
+	<script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js'></script>
+	<script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js'></script>
+	<script type="text/javascript" src="js/adminCtrl.js"></script>   
+ 
+</body>
+</html>
