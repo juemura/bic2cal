@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="indexApp">
 <head profile="https://bic2cal.eecs.berkeley.edu/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -269,7 +269,7 @@
 		</div>
 	</section><!--/#about-->
 	
-	<section id="rewards">
+	<section id="rewards" ng-controller="VoteCtrl">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-9">
@@ -278,50 +278,34 @@
 					</div>
 					<section class="insert" style="float:left; padding-right:50px">
 					    <h3>Insert Data</h3>
-					    <form action="/set-new-choice" method="post">
 					        <div class="input">
-					            <label for="title">Reward</label>
-					            <input style="color:black" type="text" id="choice" name="choice">
+					            <input class="form-control" ng-model="inputChoiceName">
+					    		<button class="btn btn-primary" ng-click="addChoice()">Add choice</button>
 					        </div>
-					        <button type="submit">INSERT</button>
-					    </form>
 					</section>
 					<section class="get" style="float:left; padding-right:50px">
 					    <h3>Get Data</h3>
-					    <a href="/get-poll">LOAD DATA</a>
-					    <div>
-					        {{# each choices }}
-					            <article class="choices">
-					                <div>Name: {{ this.text }}</div>
-					                <div>Total Votes: {{ this.totalVotes }}</div>
-					                <div>Votes: {{ this.votes }}</div>
-					            </article>
-					        {{/each}}
-					    </div>
-					</section>
-					<section class="update" style="float:left; padding-right:50px">
-					    <h3>Update Data</h3>
-					    <form action="/vote" method="post">
-					        <div class="input">
-					            <label for="text">Name</label>
-					            <input style="color:black" type="text" id="text" name="text">
-					        </div>
-					        <div class="input">
-					            <label>Vote: </label>
-								<input style="color:black" type="radio" id="vote" name="vote">
-					        </div>
-					        <button type="submit">UPDATE</button>
-					    </form>
-					</section>
-					<section class="delete" style="float:left; padding-right:50px">
-					    <h3>Delete Data</h3>
-					    <form action="/delet-choice" method="post">
-					        <div class="input">
-					            <label for="id">Name</label>
-					            <input style="color:black" type="text" id="text" name="text">
-					        </div>
-					        <button type="submit">DELETE</button>
-					    </form>
+					    <table class="table">
+					    	<thead>
+					    		<tr>
+					    			<td></td>
+					    			<td>Name: </td>
+					    			<td>Votes: </td>
+					    			<td>Totalvotes: </td>
+					    			<td></td>
+					    		</tr>
+					    	</thead>
+					    	<tbody>
+					    		<tr ng-repeat="choice in choices">
+					    			<td class="radio"><input type="radio" id="voteRadio" name="voteRadio" ng-click="selected(choice._id)"></td>
+					    			<td>{[{choice.text}]}</td>
+					    			<td>{[{choice.votes}]}</td>
+					    			<td>{[{choice.totalVotes}]}</td>
+					    			<td><button class="btn btn-danger" ng-click="delete(choice._id)">Delete</button></td>
+					    		</tr>
+					    	</tbody>
+					    </table>
+					    <button class="btn btn-primary" ng-click="vote()">Vote</button>
 					</section>
 				</div>
 				<div class="prize">
@@ -432,5 +416,6 @@
  	<script type="text/javascript" src="js/main.js"></script> 
   	<script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js'></script>
 	<script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js'></script>
+	<script type="text/javascript" src="js/controller.js"></script> 
 </body>
 </html>

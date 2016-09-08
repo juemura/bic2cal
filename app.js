@@ -5,6 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');// templating engine
+var mongoose = require('mongoose');
+var db;
+
+db = mongoose.connect('localhost:27017/poll');
+
+var choiceSchema = require('./models/rewardpoll.js').ChoiceSchema;
+var Choices = db.model('choices', choiceSchema);
+
 
 var routes = require('./routes/index');
 
@@ -24,6 +32,49 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+
+//Calls to DB
+app.get('/poll', function(req, res, next) {
+  Choices.find(function(err, doc) {
+    if(err) throw err;
+    res.json(doc);
+  });
+});
+
+app.post('/poll', function(req, res, next) {
+  var item = {
+    text: req.body.text,
+    votes: 0,
+    totalVotes: req.body.totalVotes
+  }
+  var choice = new Choices(item);
+  choice.save();
+  res.json(item)
+});
+
+app.delete('/poll/:id', function(req, res) {
+  var id = req.params.id;
+  Choices.findByIdAndRemove(id).exec();
+  Choices.find(function(err, doc) {
+    if(err) throw err;
+    res.json(doc);
+  });
+});
+
+app.put('/poll/:id', function(req, res) {
+  var id = req.params.id;
+  Choices.findOne({_id: id}, function(err, choices) {
+    var total = 0;
+    if(err) throw err;
+    choices.votes += 1;
+    total = choices.totalVotes + 1;
+    Choices.update({},{ $set: {totalVotes: total}}, {multi: true}).exec();
+    choices.save(function (err) {
+      if(err) throw err;
+    });
+    res.json(choices);
+  });
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
