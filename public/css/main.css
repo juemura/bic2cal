@@ -728,8 +728,18 @@ h2 {
   padding-right: 20px;
 }
 
-#contact-section h3 {  
+#contact-section h2 {
+  padding-top: 20px;  
   margin-bottom: 25px
+}
+
+#contact-section p {
+  font-size: 28px;
+  color: #555;
+}
+
+#contact-section a {
+  font-size: 28px;
 }
 
 #contact address {
