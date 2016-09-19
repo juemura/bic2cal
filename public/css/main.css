@@ -556,6 +556,24 @@ h2 {
   background-color: #126d55
 }
 
+/*************************
+******Challenges CSS****
+**************************/
+
+#challenges {
+  background-color: #e27a3f;  
+  position: relative;  
+  width: 100%;
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#challenges IMG.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
 
 
 /*************************
