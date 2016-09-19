@@ -569,6 +569,12 @@ h2 {
   padding-bottom: 50px;
 }
 
+#challenges IMG.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
 
 /*************************
 ******Twitter CSS****
