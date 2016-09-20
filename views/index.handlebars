@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en" ng-app="indexApp">
 <head profile="https://bic2cal.eecs.berkeley.edu/">
 	<link rel="icon" 
@@ -24,6 +24,22 @@
 	    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
 	    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
 	    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<style> img.img-responsive_1 {
+		
+	background: none;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	height: 200px;
+	width: 400px;
+}
+img.img-responsive_2 {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	height: 140px;
+	width: 400px;
+	} </style>
 	</head><!--/head-->
 
 	<body>
@@ -54,15 +70,21 @@
 						<ul class="nav navbar-nav navbar-right">                 
 							<li class="scroll active"><a href="#home">Home</a></li>
 							<li class="scroll"><a href="#explore">Date</a></li>                         
-							<li class="scroll"><a href="#download">Download</a></li>
 							<li class="scroll"><a href="#about">The Challenge</a></li>
+							<li class="scroll"><a href="#download">Download</a></li>							
 							<li class="scroll"><a href="#rewards">Rewards</a></li>
-
 							<li class="no-scroll"><a href="#sponsor">Partners</a></li>
 							<li class="scroll"><a href="#contact">Contact</a></li>       
 						</ul>
 					</div>
-				</div>
+				</div><ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet"><img alt="Tweet" src="images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://www.tumblr.com/share?v=3&u=&t=&s=" target="_blank" title="Post to Tumblr"><img alt="Post to Tumblr" src="images/flat_web_icon_set/color/Tumblr.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=&description=" target="_blank" title="Pin it"><img alt="Pin it" src="images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="mailto:?subject=&body=:%20" target="_blank" title="Send email"><img alt="Send email" src="images/flat_web_icon_set/color/Email.png"></a></li>
+</ul>
 			</div>
 		</div>                    
 	</header>
@@ -198,27 +220,42 @@
 			</div>/-->
 		</div>
 	</section><!--/#explore-->
-
-	<section id="download">
+	<section id="about">
 		<div class="container">
+			<h2>How it works</h2>
 			<div class="row">
-
-				<div class="about_app col-md-8">					
-					<h2 class="heading">About the E-mission App</h2>	
-					<p>E-mission's goal is to enable personal and structural shifts to sustainable transportation through a smartphone application that collects mobility data and provides users with insights about their travel patterns.</p>
-					<a href="https://e-mission.eecs.berkeley.edu/" class="btn btn-primary">More information<i class="fa fa-angle-right"></i></a>
-
+				<div class="col-md-3">
+					<div class="about-step">
+						<img class="img-responsive" src="images/how-it-works/step1.png" alt="Download the app">
+						<h4>Install the app</h4>
+						<p>Get started by installing the app and help us spread the word.</p>
+					</div>
 				</div>
-
-				<div class="col-md-4">
-					<a href='https://play.google.com/store/apps/details?id=edu.berkeley.eecs.emission'><img class="img-responsive download_badge" alt='Get it on Google Play' src="images/download_google.png"/></a>
-
-					<a href="https://itunes.apple.com/us/app/emission/id1084198445"><img class="img-responsive download_badge" alt='Download on the App Store' src="images/download_apple.png"></a>
-				</div>				
+				<div class="col-md-3">
+					<div class="about-step">
+						<img class="img-responsive" src="images/how-it-works/step2.png" alt="Download the app">
+						<h4>Form a team</h4>
+						<p>Playing with friends is a lot more fun! But don't worry, you can still play solo if you prefer.</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="about-step">
+						<img class="img-responsive" src="images/how-it-works/step3.png" alt="Download the app">
+						<h4>Pick a challenge</h4>
+						<p>There will be different challenges for different levels and categories to fit a range of needs and preferences. Everyone is welcome!</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="about-step">
+						<img class="img-responsive" src="images/how-it-works/step4.png" alt="Download the app">
+						<h4>Play!</h4>
+						<p>Start riding and have fun! When you bike, Emission will make sure your well deserved points are computed automatically. No data input hassle!</p>
+					</div>
+				</div>
 			</div>
 		</div>
-	</section><!--/#download-->
-
+	</section><!--/#about-->
+	
 	<section id="event">
 		<div class="container">
 			<div id="event-carousel" class="carousel slide" data-interval="false">
@@ -280,42 +317,27 @@
 			</div>		
 		</div>
 	</section><!--/#event-->
-	<section id="about">
+
+	<section id="download">
 		<div class="container">
-			<h2>How it works</h2>
 			<div class="row">
-				<div class="col-md-3">
-					<div class="about-step">
-						<img class="img-responsive" src="images/how-it-works/step1.png" alt="Download the app">
-						<h4>Install the app</h4>
-						<p>Get started by installing the app and help us spread the word.</p>
-					</div>
+
+				<div class="about_app col-md-8">					
+					<h2 class="heading">About the E-mission App</h2>	
+					<p>E-mission's goal is to enable personal and structural shifts to sustainable transportation through a smartphone application that collects mobility data and provides users with insights about their travel patterns.</p>
+					<a href="https://e-mission.eecs.berkeley.edu/" class="btn btn-primary">More information<i class="fa fa-angle-right"></i></a>
+
 				</div>
-				<div class="col-md-3">
-					<div class="about-step">
-						<img class="img-responsive" src="images/how-it-works/step2.png" alt="Download the app">
-						<h4>Form a team</h4>
-						<p>Playing with friends is a lot more fun! But don't worry, you can still play solo if you prefer.</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="about-step">
-						<img class="img-responsive" src="images/how-it-works/step3.png" alt="Download the app">
-						<h4>Pick a challenge</h4>
-						<p>There will be different challenges for different levels and categories to fit a range of needs and preferences. Everyone is welcome!</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="about-step">
-						<img class="img-responsive" src="images/how-it-works/step4.png" alt="Download the app">
-						<h4>Play!</h4>
-						<p>Start riding and have fun! When you bike, Emission will make sure your well deserved points are computed automatically. No data input hassle!</p>
-					</div>
-				</div>
+
+				<div class="col-md-4">
+					<a href='https://play.google.com/store/apps/details?id=edu.berkeley.eecs.emission'><img class="img-responsive download_badge" alt='Get it on Google Play' src="images/download_google.png"/></a>
+
+					<a href="https://itunes.apple.com/us/app/emission/id1084198445"><img class="img-responsive download_badge" alt='Download on the App Store' src="images/download_apple.png"></a>
+				</div>				
 			</div>
 		</div>
-	</section><!--/#about-->
-	
+	</section><!--/#download-->
+
 	<section id="rewards" ng-controller="VoteCtrl">
 		<div class="container">
 			<div class="row">
@@ -355,79 +377,62 @@
 			
 		</div>		
 	</section><!--/#twitter-feed-->
-	.img {
-    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-    filter: grayscale(100%);
-}
+
 	<section id="sponsor">
 		<div style="background-color: white;">
 			<div id="sponsor-carousel" class="carousel slide" data-interval="false">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-10">
-							<h2 style="color:black;">Partners</h2>			
-							<a class="sponsor-control-left" href="#sponsor-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-							<a class="sponsor-control-right" href="#sponsor-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
+							<h2 style="color:black; margin-top: 40px;">Partners</h2>			
 							<div class="carousel-inner">
 								<div class="item active">
-									<ul>
-										<li><a href="https://sustainability.berkeley.edu/"><img class="img-responsive" src="images/sponsor/ucb.png" alt="University of California, Berkeley - Office of Sustainability and Energy"></a>
-											<p style="color:black;">Office of Sustainability and Energy</p></li>
-									<li></li>
-									<li></li>
-									<li><a href="#"><img style="width: 60%" class="img-responsive" src="images/sponsor/become-a-sponsor.png" alt="Become a Sponsor!"></a></li>
-									
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/UCB-Sustainability.jpg" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/amplab.png" alt=""></a></li>
-								</ul>
+									<ul style="height: 500px">
+										<li style="margin-bottom:10px"><a href="https://sustainability.berkeley.edu/"><img class="img-responsive_1" src="images/sponsor/UCB-Sustainability.jpg" alt="University of California, Berkeley - Office of Sustainability and Energy"></a>
+											<li style="margin-bottom:10px"><a href="http://sdb.cs.berkeley.edu/sdb/"><img class="img-responsive_1" src="images/sponsor/SDB_1.png" alt="Software Defined Buildings, UC Berkeley"></li>
+											<li style="margin:0px"><a href="https://eecs.berkeley.edu/"><img class="img-responsive_2" src="images/sponsor/Master_Race.png" alt="Electrical Engineering and Computer Sciences, Berkeley"></li>
+											<li style="margin:0px"><a href="https://amplab.cs.berkeley.edu/"><img class="img-responsive_2" src="images/sponsor/AMPLab.png" alt="AMPLab"></li>
+											<li><a href="mailto:shankari@eecs.berkeley.edu?Subject=Bic2Cal%20partnership%20inquiry"><img style="width: 60%; margin-left: 300px" class="img-responsive" src="images/sponsor/become-a-sponsor.png" alt="Become a Sponsor!"></a></li>
+										</ul>
+									</div>
+									<div class="item">
+										<ul>
+										</div>
+									</div>
+								</div>				
 							</div>
-							<div class="item">
-								<ul>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/nissay_logo.png" alt=""></a></li> </div>
-							<!--
-							<div class="item">
-								<ul>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor6.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor5.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor4.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor3.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor2.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor1.png" alt=""></a></li>
-								</ul>
-							</div>-->
+							<div class="light">
+								<a href="mailto:shankari@eecs.berkeley.edu?Subject=Bic2Cal%20partnership%20inquiry" target="_top"><img class="img-responsive" src="images/sponsor/become-a-partner.png" alt="Become a Partner!"></a>
+							</div>
 						</div>
 					</div>
-				</div>				
-			</div>
-			<div class="light">
-				<a href="mailto:shankari@eecs.berkeley.edu?Subject=Bic2Cal%20partnership%20inquiry" target="_top"><img class="img-responsive" src="images/sponsor/become-a-partner.png" alt="Become a Partner!"></a>
-			</div>
-		</div>
-	</div>
-</section><!--/#sponsor-->
-
-<section id="contact">
-	<div class="row">
-		<div class="col-md-8">
-			<div id="map">
-				<div id="gmap-wrap">
-					<div id="gmap"> 				
-					</div>	 			
 				</div>
-			</div><!--/#map-->
-		</div>
-		<div class="col-md-4">
-			<div id="contact-section">
-				<h2>Contact us</h2>
-				<p style="font-size: 24px;">For more information, contact: </p>
-				<a href="mailto:shankari@eecs.berkeley.edu?Subject=Bic2Cal" target="_top">shankari@eecs.berkeley.edu</a>
-				<p>K. Shankari <br>EECS Department <br>UC Berkeley </p>
-
 			</div>
-		</div>	
-	</div>
-</section>
-<!--/#contact-->
+		</div>
+	</section><!--/#sponsor-->
+
+	<section id="contact">
+		<div class="row">
+			<div class="col-md-8">
+				<div id="map">
+					<div id="gmap-wrap">
+						<div id="gmap"> 				
+						</div>	 			
+					</div>
+				</div><!--/#map-->
+			</div>
+			<div class="col-md-4">
+				<div id="contact-section">
+					<h2>Contact us</h2>
+					<p style="font-size: 24px;">For more information, contact: </p>
+					<a href="mailto:shankari@eecs.berkeley.edu?Subject=Bic2Cal" target="_top">shankari@eecs.berkeley.edu</a>
+					<p>K. Shankari <br>EECS Department <br>UC Berkeley </p>
+
+				</div>
+			</div>	
+		</div>
+	</section>
+	<!--/#contact-->
 
     <!--<footer id="footer">
         <div class="container">
@@ -451,5 +456,6 @@
     <script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js'></script>
     <script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js'></script>
     <script type="text/javascript" src="js/voteCtrl.js"></script>  
+
 </body>
 </html>
