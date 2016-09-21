@@ -1,19 +1,19 @@
 	<!DOCTYPE html>
-<html lang="en" ng-app="indexApp">
-<head profile="https://bic2cal.eecs.berkeley.edu/">
-	<link rel="icon" 
-	type="image/png" 
-	href="images/bike_icon.png">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<title>Bic2Cal</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/font-awesome.min.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/animate.css" rel="stylesheet">	
-	<link href="css/responsive.css" rel="stylesheet">
+	<html lang="en" ng-app="indexApp">
+	<head profile="https://bic2cal.eecs.berkeley.edu/">
+		<link rel="icon" 
+		type="image/png" 
+		href="images/bike_icon.png">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>Bic2Cal</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">	
+		<link href="css/responsive.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
 	    <script src="js/html5shiv.js"></script>
@@ -24,28 +24,42 @@
 	    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
 	    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
 	    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-	<style> img.img-responsive_1 {
-		
-	background: none;
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
-	height: 200px;
-	width: 400px;
-}
-img.img-responsive_2 {
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
-	height: 140px;
-	width: 400px;
-	} </style>
-	</head><!--/head-->
+	    <style> img.img-responsive_1 {
 
-	<body>
-		<header id="header" role="banner">		
-			<div class="main-nav">
-				<div class="container">
+	    	background: none;
+	    	margin: 0px;
+	    	padding: 0px;
+	    	border: 0px;
+	    	height: 200px;
+	    	width: 400px;
+	    }
+	    img.img-responsive_2 {
+	    	margin: 0px;
+	    	padding: 0px;
+	    	border: 0px;
+	    	height: 140px;
+	    	width: 400px;
+	    	} </style>
+
+
+	    	<style type="text/css">
+
+	    	#share-buttons img {
+	    		width: 35px;
+	    		padding: 5px;
+	    		border: 0;
+	    		box-shadow: 0;
+	    		display: inline;
+	    	}
+
+	    	</style>
+	    </head><!--/head-->
+
+
+	    <body>
+	    	<header id="header" role="banner">		
+	    		<div class="main-nav">
+	    			<div class="container">
 				<!--<div class="header-top">
 					<div class="pull-right social-icons">
 						<a href="#"><i class="fa fa-twitter"></i></a>
@@ -77,14 +91,38 @@ img.img-responsive_2 {
 							<li class="scroll"><a href="#contact">Contact</a></li>       
 						</ul>
 					</div>
-				</div><ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="images/flat_web_icon_set/color/Facebook.png"></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet"><img alt="Tweet" src="images/flat_web_icon_set/color/Twitter.png"></a></li>
-  <li><a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="images/flat_web_icon_set/color/Google+.png"></a></li>
-  <li><a href="http://www.tumblr.com/share?v=3&u=&t=&s=" target="_blank" title="Post to Tumblr"><img alt="Post to Tumblr" src="images/flat_web_icon_set/color/Tumblr.png"></a></li>
-  <li><a href="http://pinterest.com/pin/create/button/?url=&description=" target="_blank" title="Pin it"><img alt="Pin it" src="images/flat_web_icon_set/color/Pinterest.png"></a></li>
-  <li><a href="mailto:?subject=&body=:%20" target="_blank" title="Send email"><img alt="Send email" src="images/flat_web_icon_set/color/Email.png"></a></li>
-</ul>
+				</div>
+				<div id="share-buttons">
+
+					<!-- Facebook -->
+					<a href="http://www.facebook.com/sharer.php?u=https://bic2cal.eecs.berkeley.edu/" target="_blank">
+						<img src="images/share/facebook.png" alt="Facebook" />
+					</a>   
+					<!-- Twitter -->
+					<a href="https://twitter.com/share?url=Bic2Cal&amp;text=Try%20out%20Bic2Cal&amp;hashtags=Bic2Cal" target="_blank">
+						<img src="images/share/twitter.png" alt="Twitter" />
+					</a>
+					<!-- Tumblr-->
+					<a href="http://www.tumblr.com/share/link?url=https://bic2cal.eecs.berkeley.edu/&amp;title=Bic2Cal" target="_blank">
+						<img src="images/share/tumblr.png" alt="Tumblr" />
+					</a>
+					<!-- Google+ -->
+					<a href="https://plus.google.com/share?url=https://bic2cal.eecs.berkeley.edu/" target="_blank">
+						<img src="images/share/google.png" alt="Google" />
+					</a>
+					<!-- Pinterest -->
+					<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+						<img src="images/share/pinterest.png" alt="Pinterest" />
+					</a>
+					<!-- LinkedIn -->
+					<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://bic2cal.eecs.berkeley.edu/" target="_blank">
+						<img src="images/share/linkedin.png" alt="LinkedIn" />
+					</a>
+					<!-- Email -->
+					<a href="mailto:?Subject=Bic2Cal&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://bic2cal.eecs.berkeley.edu/">
+						<img src="images/share/email.png" alt="Email" />
+					</a>
+				</div>
 			</div>
 		</div>                    
 	</header>
@@ -456,6 +494,31 @@ img.img-responsive_2 {
     <script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js'></script>
     <script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js'></script>
     <script type="text/javascript" src="js/voteCtrl.js"></script>  
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    	var js, fjs = d.getElementsByTagName(s)[0];
+    	if (d.getElementById(id)) return;
+    	js = d.createElement(s); js.id = id;
+    	js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+    	fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>window.twttr = (function(d, s, id) {
+    	var js, fjs = d.getElementsByTagName(s)[0],
+    	t = window.twttr || {};
+    	if (d.getElementById(id)) return t;
+    	js = d.createElement(s);
+    	js.id = id;
+    	js.src = "https://platform.twitter.com/widgets.js";
+    	fjs.parentNode.insertBefore(js, fjs);
+
+    	t._e = [];
+    	t.ready = function(f) {
+    		t._e.push(f);
+    	};
+
+    	return t;
+    }(document, "script", "twitter-wjs"));</script>
 
 </body>
 </html>
