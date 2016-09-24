@@ -5,16 +5,16 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');// templating engine
-var mongoose = require('mongoose');
-var db;
+// var mongoose = require('mongoose');
+// var db;
 
-db = mongoose.connect('localhost:27017/poll');
+// db = mongoose.connect('localhost:27017/poll');
 
-var choiceSchema = require('./models/rewardpoll.js').ChoiceSchema;
-var Choices = db.model('choices', choiceSchema);
+// var choiceSchema = require('./models/rewardpoll.js').ChoiceSchema;
+// var Choices = db.model('choices', choiceSchema);
 
-var adminSchema = require('./models/adminAcc.js').AdminSchema;
-var Admin = db.model('admin', adminSchema);
+// var adminSchema = require('./models/adminAcc.js').AdminSchema;
+// var Admin = db.model('admin', adminSchema);
 
 
 var routes = require('./routes/index');
