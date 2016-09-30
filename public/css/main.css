@@ -412,10 +412,6 @@ h2 {
   padding: 10px;
 }
 
-#download a {
-  color: #FFFFFF;
-}
-
 /*************************
 *******Rewards CSS******
 **************************/
@@ -514,6 +510,9 @@ h2 {
   padding-bottom: 50px;
 }
 
+#about a {
+  color: #FFFFFF;
+}
 
 .about-content {
   width: 100%
