@@ -412,6 +412,9 @@ h2 {
   padding: 10px;
 }
 
+#download a {
+  color: #FFFFFF;
+}
 
 /*************************
 *******Rewards CSS******
