@@ -58,8 +58,8 @@
 		                    <li class="scroll"><a href="#explore">Date</a></li>
 		                    <li class="scroll"><a href="#about">Challenge</a></li>
 		                    <li class="scroll"><a href="#download">Download</a></li>
-		                    <li class="scroll"><a href="#rewards">Rewards</a></li>
 		                    <li class="no-scroll"><a href="#twitter">Partners</a></li>
+		                    <li class="scroll"><a href="#rewards">Rewards</a></li>
 		                    <li class="scroll"><a href="#contact">Contact</a></li>
 		                </ul>
 		            </div>
@@ -365,38 +365,6 @@
 		</div>
 	</section><!--/#event-->
 
-	<section id="rewards" ng-controller="VoteCtrl">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-2">
-					<div id="event-carousel" class="carousel slide" data-interval="false">
-						<h2 class="heading">Vote on the rewards!</h2>
-					</div>
-					<button style="margin:auto; display:block" class="btn btn-primary" ng-click="vote()">Vote</button>
-				</div>
-				<div style="width:60%; margin:auto;margin-bottom:50px;">
-					<div ng-repeat="poll in polls">
-						<div style="padding-top:5px; padding-left: 8%">{[{poll.text}]}</div>
-						<div style="width:100%">
-							<div style="float:left; width:8%">
-								<label>
-									<input type="radio" id="voteRadio" name="voteRadio" ng-click="selected(poll._id)">
-								</label>
-							</div>
-							<div style="float:right; width:92%">
-								<div style="background-color: lightblue; width:{[{poll.votes/poll.totalVotes*100}]}%; text-align: center;">
-									{[{poll.votes}]}
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div style="z-index:0" class="prize">
-					<img class="img-responsive" src="images/prize.png" alt="prize">
-				</div>
-			</div>
-		</div>
-	</section><!--/#rewards-->
 
 	<section id="twitter">
 		<div id="twitter-feed" class="carousel slide" data-interval="false">
@@ -506,6 +474,39 @@
 			</div>
 		</div>			
 	</section><!--/#sponsor-->
+
+	<section id="rewards" ng-controller="VoteCtrl">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-2">
+					<div id="event-carousel" class="carousel slide" data-interval="false">
+						<h2 class="heading">Vote on the rewards!</h2>
+					</div>
+					<button style="margin:auto; display:block" class="btn btn-primary" ng-click="vote()">Vote</button>
+				</div>
+				<div style="width:60%; margin:auto;margin-bottom:50px;">
+					<div ng-repeat="poll in polls">
+						<div style="padding-top:5px; padding-left: 8%">{[{poll.text}]}</div>
+						<div style="width:100%">
+							<div style="float:left; width:8%">
+								<label>
+									<input type="radio" id="voteRadio" name="voteRadio" ng-click="selected(poll._id)">
+								</label>
+							</div>
+							<div style="float:right; width:92%">
+								<div style="background-color: lightblue; width:{[{poll.votes/poll.totalVotes*100}]}%; text-align: center;">
+									{[{poll.votes}]}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="z-index:0" class="prize">
+					<img class="img-responsive" src="images/prize.png" alt="prize">
+				</div>
+			</div>
+		</div>
+	</section><!--/#rewards-->
 
 
 	<section id="contact">
