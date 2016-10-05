@@ -571,10 +571,70 @@ h2 {
   padding-bottom: 50px;
 }
 
+#challenges h4 {
+  color: #555;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 26px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
 #challenges IMG.centered {
     display: block;
     margin-left: auto;
     margin-right: auto
+}
+
+/*************************
+******Groups CSS****
+**************************/
+
+#groups {
+  background-color: #C34C39;
+  background-image: url("../images/event-bg.jpg");
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat:no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding: 30px 0 100px;
+}
+
+#groups h4 {
+  color: #BBB;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 26px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+/*************************
+******Quests CSS****
+**************************/
+
+#quests {
+  background-color: #33888F;
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat:no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding: 30px 0 100px;
+}
+
+#quests h4 {
+  color: #BBB;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 26px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+#quests a {
+  color: #daa;
 }
 
 
