@@ -83,6 +83,7 @@ h2 {
   width: 100%
 }
 
+
 .social-icons a {
   font-size: 18px;
   color: #fff;
@@ -116,6 +117,22 @@ h2 {
 .navbar-brand img {
   /*position: absolute;
   top: -35px;*/
+}
+
+.share-buttons {
+  position: relative;
+  padding-left: 20px;
+}
+
+/***Wesley's stylesheet */
+.share-buttons img {
+  /*position: absolute;
+  top: -35px;*/
+  /*width: 40px;*/
+  padding: 5px;
+  border: 0;
+  box-shadow: 0;
+  display: inline;
 }
 
 .navbar-right {
@@ -169,6 +186,20 @@ h2 {
 .fixed-menu .navbar-brand img {
   height:60px;
   top: 0;
+}
+
+.fixed-menu .share-buttons {
+  height: 35px;
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: 0;
+  display: inline;
+}
+
+.fixed-menu .share-buttons img {
+  height:35px;
+  top: 0;
+  display: inline;
 }
 
 .fixed-menu .header-top {
