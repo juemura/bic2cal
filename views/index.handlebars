@@ -36,7 +36,7 @@
     </script>
 </head><!--/head-->
 
-<body>
+<body ng-controller="IndexCtrl">
 	<header id="header" role="banner">
 		<div class="main-nav">
 			<div class="container">
@@ -56,7 +56,7 @@
 		            <div class="collapse navbar-collapse">
 		                <ul class="nav navbar-nav navbar-right">
 		                    <li class="scroll active"><a href="#home">Home</a></li>
-		                    <li class="scroll"><a href="#explore">Date</a></li>
+		                    <li class="scroll"><a href="#leaderboard">Leaderboard</a></li>
 		                    <li class="scroll"><a href="#about">Challenge</a></li>
 		                    <li class="scroll"><a href="#download">Download</a></li>
 		                    <li class="no-scroll"><a href="#twitter">Partners</a></li>
@@ -171,47 +171,31 @@
 	</section>
 	<!--/#home-->
 
-	<section id="explore">
-		<div class="container">
-			<div class="row">
-				<div class="watch">
-					<img class="img-responsive" src="images/watch.png" alt="">
+	<section id="leaderboard">
+		<div class="container ng-cloak">
+				<img class="img-responsive" src="images/leaderboard-avatars.png" style="width: 200px;display: inline;float: left;">	
+				<div>
+					<h2 style="display: inline; padding-left: 40px;"> Top 10 Groups </h2>
+					<p style="padding-top: 10px;padding-left: 240px;">
+						Go to <a href="#groups"><b>Group section</b></a> to learn more about joining a group.
+					</p>
 				</div>
-				<div class="row">
-					<h2> October 5, 2016, National Walk/Bike to School Day</h2>		
-				</div>
-				<div class="row">
-					<div class="col-md-4 col-md-offset-2 col-sm-5">
-						<h2>The Bic2Cal challenge is now live!</h2>
-						<h3>You can <a href="#download">install the app</a>, <a href="#groups">create groups</a> and <a href="#groups">start on collaborative quests</a>. After a short orientation period, we will enable the challenges, starting in:</h3>
-					</div>
-					<div class="col-sm-7 col-md-6">
-						<ul id="countdown">
-							<li>
-								<span class="days time-font">00</span>
-								<p>days </p>
-							</li>
-							<li>
-								<span class="hours time-font">00</span>
-								<p class="">hours </p>
-							</li>
-							<li>
-								<span class="minutes time-font">00</span>
-								<p class="">minutes</p>
-							</li>
-							<li>
-								<span class="seconds time-font">00</span>
-								<p class="">seconds</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!--<div class="cart">
-				<a href="#"><i class="fa fa-shopping-cart"></i> <span>Register</span></a>
-			</div>/-->
+					<table style="width: 100%;float: left" ng-show="!loading">
+						<tr>
+							<th style="width: 20%;text-align: center;"><h4><b>Position</b></h4></th>
+							<th style="width: 20%;text-align: center;"><h4><b>Party</b></h4></th>
+							<th style="width: 20%;text-align: center;"><h4><b>Members</b></h4></th>
+							<th style="width: 20%;text-align: center;"><h4><b>Level</b></h4></th>
+						</tr>
+						<tr ng-repeat="party in partys">
+							<td style="width: 20%;text-align: center;"><b>{[{party.rank}]}</b></td>
+							<td style="width: 20%;text-align: center;"><b>{[{party.partyObj.data.name}]}</b></td>
+							<td style="width: 20%;text-align: center;"><b>{[{party.memberCount}]}</b></td>
+							<td style="width: 20%;text-align: center;"><b>{[{party.stats.lvl}]}</b></td>
+						</tr>
+					</table>
 		</div>
-	</section><!--/#explore-->
+	</section>
 
 	<section id="about">
 		<div class="container">
@@ -663,13 +647,13 @@
 	<script type="text/javascript" src="js/gmaps.js"></script>
 	<script type="text/javascript" src="js/smoothscroll.js"></script>
 	<script type="text/javascript" src="js/jquery.parallax.js"></script>
-	<script type="text/javascript" src="js/coundown-timer.js"></script>
+	<!--script type="text/javascript" src="js/coundown-timer.js"></script-->
 	<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
 	<script type="text/javascript" src="js/jquery.nav.js"></script>
 	<script type="text/javascript" src="js/main.js"></script> 
 	<script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js'></script>
 	<script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js'></script>
-	<script type="text/javascript" src="js/voteCtrl.js"></script>
+	<script type="text/javascript" src="js/indexCtrl.js"></script>
 
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
