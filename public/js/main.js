@@ -1,14 +1,14 @@
-jQuery(function($) {'use strict',
+jQuery(function($) {'use strict'
 
 	//Countdown js
-	 $("#countdown").countdown({
-			date: "18 october 2016 00:00:00",
+	 /*$("#countdown").countdown({
+			date: "12 october 2016 00:00:00",
 			format: "on"
 		},
 
 		function() {
 			// callback function
-		});
+		});*/
 
 
 
