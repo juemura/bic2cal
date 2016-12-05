@@ -7,32 +7,6 @@ indexApp.config(function($interpolateProvider) {
 });
 
 indexApp.controller('IndexCtrl', function($scope, $http) {
-	/*var refresh = function() {
-		$http.get('/poll').then(function(res) {
-			$scope.polls = res.data;
-			$scope.inputChoiceName = "";
-		}, function(err) {
-			console.log(err);
-		})
-	};
-	refresh();
-
-	$scope.selected = function(id){
-		$scope.theChoiceId = id;
-	}
-
-	$scope.vote = function(){
-		if($scope.theChoiceId == null){
-			alert('Select a reward to vote');
-		} else {
-			$http.put('/poll/' + $scope.theChoiceId).then(function(res) {
-				refresh();
-				$scope.theChoiceId = null;
-			}, function(err) {
-				console.log(err);
-			});
-		}
-	};*/
 
 	var habiticaAPI = 'https://em-game.eecs.berkeley.edu/api/v3';
 	var userId = '';
@@ -40,7 +14,6 @@ indexApp.controller('IndexCtrl', function($scope, $http) {
 	var login = function(){
 		var data = {'username': 'Test100', 'email': 'loudseed83@save.world', 'password': 'loudseed83'};
 		$http.post(habiticaAPI + '/user/auth/local/login', data).then(function(res){
-			console.log(res.data);
 			userId = res.data.data.id;
 			userApiToken = res.data.data.apiToken;
 			allUsersForLeaderBoard();
@@ -112,6 +85,7 @@ indexApp.controller('IndexCtrl', function($scope, $http) {
             partyList[j].partyObj = response.data;
         }, function(error){
             console.log("Error when getting a user's party");
+            console.log(error);
         });
     };
 
@@ -134,8 +108,8 @@ indexApp.controller('IndexCtrl', function($scope, $http) {
         });
         sortForLeaderboard(partyList);
         partyList = addRank(partyList);
-        $scope.partys = partyList;
-        console.log(partyList);
+        var topTen = partyList.slice(0,10);
+        $scope.partys = topTen;
     };
 
     var roundExp = function(list){
